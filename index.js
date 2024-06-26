@@ -19,7 +19,6 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 
-mongoose.Promise = global.Promise;
 
 // URI do MongoDB obtida da variável de ambiente
 const MONGODB_URI = process.env.MONGODB_URI;
