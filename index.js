@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 // Configuração do CORS
 const corsOptions = {
-  origin: "https://pedro-paulo-dias-gk-raid.vercel.app/",
+  origin: '*',
   optionsSuccessStatus: 200 ,
 };
 
