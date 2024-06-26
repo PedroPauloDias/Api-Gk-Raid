@@ -26,6 +26,26 @@ app.get('/', (req, res) => {
   res.send('Hello, World!');
 })
 
+
+const Player = mongoose.model('Player', {
+  name: String,
+  tag: String,
+  clan: String,
+  chavesJogadas: Number,
+  hydraClash: String,
+  mediaHydraClash: String,
+  pontosCvc: String,
+  status: String,
+  detalhes: String,
+});
+
+
+
+app.get("/api/players/",  async (req, res) => {
+  const Players = await Player.find()
+  return res.send(Players);
+});
+
 app.listen(3000, () => {
   console.log('Server is running on port 3000');
 });
